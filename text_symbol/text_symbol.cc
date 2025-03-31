@@ -1,6 +1,9 @@
 void GlobalFunction(){
     return;
 }
+static void StaticFunction(){
+    return;
+}
 
 class SomeClass
 {
@@ -15,6 +18,14 @@ void SomeClass::MemberFunction(){
 void SomeClass::StaticFunction(){
     return;
 }
-
+namespace {
+    void AnonymousFunction(){
+        return;
+    }
+}
+void Use(){
+    StaticFunction();
+    AnonymousFunction();
+}
 
 
